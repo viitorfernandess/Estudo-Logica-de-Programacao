@@ -1,12 +1,29 @@
-function tituloDoFilme() {
-    var filme = document.getElementById("filme").value
-    document.getElementById("resposta").innerHTML = filme
+function converterDuracao() {
+    // Cria referência aos elementos da página 
+    var inTitulo = document.getElementById("inTitulo")
+    var inDuracao = document.getElementById("inDuracao")
+    var outTitulo = document.getElementById("outTitulo")
+    var outDuracao = document.getElementById("outDuracao")
+
+
+    // obtém conteúdos dos campos de entrada
+    var titulo = inTitulo.value
+    var duracao = Number(inDuracao.value)
+
+    // arredonda para baixo o resultado da divisão 
+    var horas = Math.floor(duracao / 60)
+
+    // obtém o resto da divisão entre os números
+    var minutos = duracao % 60
+
+    // alerta o conteúdo dos parágrafos de resposta 
+    outTitulo.textContent = titulo
+    outDuracao.textContent = horas + " hora(s) e " + minutos + "minuto(s)"
 }
 
-function duracaoDoFilme() {
-    var duracao = document.getElementById("duracao").value
-    document.getElementById("resposta").innerHTML = duracao()
-}
 
-var converter = document.getElementById("converter")
-converter.onclick = tituloDoFilme
+// cria uma referência ao elemento btConverter (botão)
+var btConverter = document.getElementById("btConverter")
+
+// registra um evento associado ao botão, para carregar uma função
+btConverter.addEventListener("click", converterDuracao)

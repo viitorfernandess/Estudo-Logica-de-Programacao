@@ -5,21 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercício 05</title>
-    <script src="index.js"></script>
 </head>
 <!-- Elaborar um programa para uma Vídeo Locadora, que leia o título e a duração de um filme em minutos. Exiba o título do filme e converta a duração para horas e minutos. -->
 
 <body>
-    <h1>Conversor Vídeo Locadora</h1>
-    <p>
-        <label>Título do filme:<input type="text" id="filme" name="filme" /></label>
-    <p>
-        <label>Duração(min):<input type="text" id="duracao" name="duracao" /></label>
+    <h1>Vídeo Locadora JS</h1>
+    <hr>
+    <p> Título do filme:
+        <input type="text" id="inTitulo">
+    </p>
+    <p> Duração(min):
+        <input type="text" id="inDuracao">
     </p>
     <p>
-        <input type="button" value="Converter em horas e minutos" onclick="tituloDoFilme()">
+        <input type="button" value="Converter em horas e minutos" id="btConverter">
     </p>
-    <p id="resposta"></p>
+    <p id="outTitulo"></p>
+    <p id="outDuracao"></p>
+    <script src="index.js"></script>
+
 </body>
 
 </html>
